@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="card" style="background-color: #084F85; width: 50%;">
+    <div class="card-body">
+      <div class="card card-credito">
+        <div class="card-body">
+          <div class="container">
+
+            <h1 style="text-align: center;">Simulá tu crédito</h1>
+
+            <!-- Monto Total -->
+            <div>
+              <label for="MontoTotal" class="form-label">MONTO TOTAL</label>
+              <input 
+                type="text" 
+                class="form-control input-credito" 
+                [ngModel]="MontoTotal | currency:'$':'symbol':'1.0-2'" 
+                (ngModelChange)="MontoTotal=$event"
+              >
+            </div>
+
+            <input 
+                type="range" 
+                min="5000" 
+                max="50000" 
+                class="form-range" 
+                id="MontoTotal" 
+                [(ngModel)]="MontoTotal"
+            >
+
+            <label for="MontoTotal" class="form-label">$5.000</label>
+            <label for="MontoTotal" class="form-label fl-right">$50.000</label>
+
+            <!-- Plazo -->
+            <div>
+              <label for="Plazo" class="form-label">PLAZO</label>
+              <input type="number" class="form-control input-credito" [(ngModel)]="Plazo">
+            </div>
+
+            <input 
+                type="range" 
+                min="3" 
+                max="24" 
+                class="form-range" 
+                id="Plazo" 
+                [(ngModel)]="Plazo"
+            >
+            <label for="Plazo" class="form-label">3</label>
+            <label for="Plazo" class="form-label fl-right">24</label>
+
+
+
+            
+            <div class="card card-credito">
+              <div class="row">
+                <div class="col-6">
+                  <h3>CUOTA FIJA POR MES</h3>
+                </div>
+                <div class="col-6" style="text-align: end;">
+                  <h1>{{CuotaMes | currency}}</h1>
+                </div>
+              </div>
+              
+              <div>
+                <button type="button" class="btn obtene-credito" (click)="obteneCredito()" style="width: 50%;"> <strong> OBTENÉ
+                    CREDITO</strong></button>
+                <button type="button" class="btn obtene-credito fl-right"
+                  style="width: 40%; background-color: #084F85;"> <strong>VER DETALLES DE CUOTAS</strong></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+</div>

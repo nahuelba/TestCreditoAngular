@@ -1,0 +1,26 @@
+.card-credito{
+    background-color: #003B67;
+    color: white;
+}
+
+
+.input-credito{
+    background-color: #003B67;
+    color: white;
+    border-radius: 0;
+    width: 30%;
+    float: right;
+}
+
+.obtene-credito{
+    
+    background-color: #17AA8D;
+    color: white;
+}
+
+
+.fl-right{
+    float: right;
+}
+
+
