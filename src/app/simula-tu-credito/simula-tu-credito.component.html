@@ -13,8 +13,8 @@
               <input 
                 type="text" 
                 class="form-control input-credito" 
-                [ngModel]="MontoTotal | currency:'$':'symbol':'1.0-2'" 
-                (ngModelChange)="MontoTotal=$event"
+                [ngModel]="MontoTotal | currency:'USD':'symbol':'1.0-2'" 
+                (ngModelChange)="MontoTotal=currencyInputChanged($event)"
               >
             </div>
 

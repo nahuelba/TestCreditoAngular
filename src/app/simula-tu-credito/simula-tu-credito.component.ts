@@ -1,4 +1,5 @@
 
+import { PipeTransform } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,9 +16,15 @@ export class SimulaTuCreditoComponent {
 
   constructor() { }
 
+  currencyInputChanged(value) {
+    var num = value.replace(/[$,]/g, "");
+    return Number(num);
+  }
 
   obteneCredito(){
     this.CuotaMes=this.MontoTotal/this.Plazo
   }
+
+  
 
 }
